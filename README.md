@@ -130,6 +130,5 @@ including the commit or release you used, and consider citing our related poster
 > Learning on Label-Free Leukemia Raman Cell Maps* [Poster presentation]. SPEC 2026,
 > Vanderbilt University, Nashville, TN, United States.
 
-The research was presented as a conference poster; there is no accompanying journal
-manuscript at present. Thank you for acknowledging both the original dataset creators
+Thank you for acknowledging both the original dataset creators
 and the work behind this repository.
