@@ -48,10 +48,10 @@ python train.py
 ```
 
 One command trains all five models below using the supplied grouped four-fold split.
-Normalization is fitted on inner-training data only. The table shows the historical
+Normalization is fitted on inner-training data only. The table shows the 
 results used to select these models from the consolidated single-view comparison.
 
-| Model | Historical fold-mean balanced accuracy |
+| Model | Fold-mean balanced accuracy |
 | --- | ---: |
 | UG-DEC-MIL | 0.7352 |
 | DEC-MIL | 0.7192 |
