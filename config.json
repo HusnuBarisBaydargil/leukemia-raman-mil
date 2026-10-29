@@ -1,0 +1,78 @@
+{
+  "seed": 20260310,
+  "device": "auto",
+  "models": [
+    "ug-dec-mil",
+    "dec-mil",
+    "attention-mil",
+    "abmil",
+    "clam-sb"
+  ],
+  "paths": {
+    "raw_data": "data/raw",
+    "cache": "data/cache",
+    "outputs": "outputs"
+  },
+  "preprocessing": {
+    "map_shape": [
+      64,
+      64
+    ],
+    "channels": 1600,
+    "patch_size": 8
+  },
+  "model": {
+    "instance_hidden_dim": 128,
+    "embedding_dim": 64,
+    "dropout": 0.2,
+    "heads": {
+      "dec-mil": {
+        "attention_hidden_dim": 32,
+        "top_k": 8
+      },
+      "ug-dec-mil": {
+        "attention_hidden_dim": 32,
+        "top_k": 8
+      },
+      "attention-mil": {
+        "attention_hidden_dim": 32
+      },
+      "abmil": {
+        "attention_hidden_dim": 256
+      },
+      "clam-sb": {
+        "projection_dim": 512,
+        "attention_hidden_dim": 256,
+        "projection_dropout": 0.25,
+        "k_sample": 8
+      }
+    }
+  },
+  "training": {
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "max_epochs": 200,
+    "min_epochs": 25,
+    "patience": 25,
+    "min_delta": 0.0001,
+    "grad_clip_norm": 1.0
+  },
+  "model_overrides": {
+    "attention-mil": {
+      "device": "cpu"
+    },
+    "abmil": {
+      "seed_offset": 100
+    },
+    "clam-sb": {
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "seed_offset": 200
+    }
+  },
+  "smoothing": {
+    "alpha_max": 0.2,
+    "entropy_epsilon": 1e-08,
+    "stage_b_seed_offset": 1000
+  }
+}
