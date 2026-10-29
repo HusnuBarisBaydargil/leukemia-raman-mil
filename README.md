@@ -1,6 +1,6 @@
 # Leukemia Raman classification
 
-Welcome! This repository contains research code for classifying label-free Raman
+This repository contains research code for classifying label-free Raman
 cell maps as acute myeloid leukemia (AML) or acute lymphoblastic leukemia (ALL).
 It brings together five multiple instance learning (MIL) models and a simple
 workflow: download the data, preprocess it, train the models, and make predictions.
